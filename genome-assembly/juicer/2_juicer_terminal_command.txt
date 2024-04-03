@@ -1,0 +1,54 @@
+## Juicer, Part 2: Run Juicer ##
+## Faye Romero. University of Rochester. 15 June 2023 ##
+## Paste the following directly into command line ##
+
+#SBATCH --mem=300G
+#SBATCH -N 1
+#SBATCH -c 24
+
+module purge
+module load circ
+module load jre/1.8.0_111
+module load cuda/11.3
+module load gcc/11.2.0
+module load samtools/1.16.1
+module load python/2.7.12
+module load bwa/0.7.17
+module load gnutls/3.5.15
+
+export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/scratch/nchen11_lab/Juicer/scripts
+export PATH=$PATH:/software/gnutls/3.5.15
+export PATH=$PATH:/software/gcc/11.2.0
+export PATH=$PATH:/software/bwa/0.7.17
+export PATH=$PATH:/software/python/2.7.12
+export PATH=$PATH:/software/samtools/1.16.1
+export PATH=$PATH:/software/cuda/11.3
+export PATH=$PATH:/software/jre/1.8.0_111
+
+JUICER_SCRIPT=/scratch/nchen11_lab/Juicer/scripts/juicer_Bluehive.sh
+JUICER_TOP_DIR=/scratch/nchen11_lab/Juicer
+CHROM_SIZES=/scratch/nchen11_lab/Juicer/restriction_sites/HifiSal_Dec22.chrom.sizes
+RES_SITES=/scratch/nchen11_lab/Juicer/restriction_sites/HifiSal_Dec22_DpnII.txt
+DRAFT=/scratch/nchen11_lab/Juicer/references/HifiSal_Dec22.fasta
+JUICER_SCRIPTS_DIR=/scratch/nchen11_lab/Juicer
+
+cd $JUICER_TOP_DIR
+
+nohup $JUICER_SCRIPT \
+-d $JUICER_TOP_DIR \
+-q rosalind -l rosalind \
+-s DpnII \
+-p $CHROM_SIZES \
+-y $RES_SITES \
+-z $DRAFT \
+-C 180000000 \
+-D $JUICER_SCRIPTS_DIR \
+-Q 180:00:00 -L 180:00:00 \
+--assembly \
+-t 24 -T 24 &> juicer.HifiSal_Dec22.04302023.terminal.out.txt &
+
+#The --assembly tag creates the merged_nodups.txt file (mnd file), which is a raw text file with paired contacts. If you have replicate libraries, you'll need to run this script individually for each library, and then merge each merged_nodups.txt file together into a single combined merged_nodups.txt file. See the script merging_mnd.sh.
+
+#Next step 1: convert your reference fasta file to a .assembly file using generate-sorted-assembly-file-from-fasta.awk
+#Next step 2: Use the merged_nodups.txt file and the .assembly file to run run-assembly-visualizer.sh.

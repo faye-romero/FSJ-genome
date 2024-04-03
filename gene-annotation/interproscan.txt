@@ -1,0 +1,26 @@
+## InterProScan ##
+## Faye Romero. University of Rochester. 27 March 2024 ##
+
+# I installed a Docker container of InterProScan and am using Apptainer to pull the image.
+# I am running this via an interactive session. -t 5-00:00:00 -c 16 --mem=60G
+
+# Make sure the protein file from BRAKER3 is free of asterisks before running!
+
+# Set variables and PATHs
+cd /home/fromero3/interproscan-5.66-98.0
+SIF=/home/fromero3/sifs/interproscan-5.66-98.0.sif
+JAVA_HOME=/home/fromero3/miniconda3/jre
+export PATH=/home/fromero3/miniconda3/jre/bin:$PATH
+
+PROTEINS='/home/fromero3/run_braker3_March2024/braker.clean.aa'
+
+# Execute InterProScan
+mkdir interproscan_out_March2024
+apptainer exec -B ${PWD}:${PWD} ${SIF} /home/fromero3/interproscan-5.66-98.0/interproscan.sh \
+--input $PROTEINS \
+--cpu 16 \
+--output-dir interproscan_out_March2024 \
+--goterms --iprlookup \
+--tempdir temp
+
+# Took ~1.5 days.

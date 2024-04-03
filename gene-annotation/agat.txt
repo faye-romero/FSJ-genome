@@ -1,0 +1,25 @@
+## AGAT ##
+## Faye Romero. University of Rochester. 27 March 2024 ##
+
+# I installed a Docker container of AGAT and am using Apptainer to pull the image.
+# I am running this via an interactive session. -t 5-00:00:00 -c 16 --mem=60G
+
+# Start an AGAT shell
+apptainer shell ./sifs/agat.sif
+
+#Set variables
+BRAKER='/home/fromero3/run_braker3_March2024/braker.gff3'
+BLAST='/home/fromero3/braker.aa_uniprot_sprot_27March2024.out.blast'
+INTERPRO='/home/fromero3/interproscan-5.66-98.0/interproscan_out_March2024/braker.clean.aa.tsv'
+
+# create a final merged annotation from BRAKER3, BLAST, and InterProScan outputs
+agat_sp_manage_functional_annotation.pl --gff3 $BRAKER --blast $BLAST --db uniprot_sprot_11Dec2023.fasta --interpro $INTERPRO --output final_merged_annotation_29March2024 &> merge_annotation_03292024.log.txt &
+
+# run agat_sp_statistics.pl on final gene set to get annotation stats
+cd /home/fromero3/final_merged_annotation_29March2024
+ANNOT='/home/fromero3/final_merged_annotation_29March2024/FINAL.29March2024.braker.gff3'
+
+agat_sp_statistics.pl --gff $ANNOT -o stats.FINAL.29March2024.braker.gff3.txt --gs 1322604286 -d &> log.stats.FINAL.29March2024.braker.gff3.txt &
+
+# run agat_sp_functional_statistics.pl on final gene set to get functional stats
+agat_sp_functional_statistics.pl --gff $ANNOT --gs 1322604286 -o func.stats.FINAL.29March2024.braker.gff3.txt &> log.func.stats.FINAL.29March2024.braker.gff3.txt &

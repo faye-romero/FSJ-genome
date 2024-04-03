@@ -1,0 +1,37 @@
+## BRAKER3 ##
+## Faye Romero. University of Rochester. 27 March 2024 ##
+
+# I installed a Docker container of BRAKER3 and am using Apptainer to pull the image.
+# I am running this via an interactive session. -t 5-00:00:00 -c 16 --mem=60G
+
+#Set PATH variable
+export AUGUSTUS_CONFIG_PATH=/home/fromero3/Augustus/config/
+export BRAKER_SIF=/home/fromero3/sifs/braker3.sif
+
+#Set other variables
+GENOME='/home/fromero3/AphCoe_V3_internal_Mar2024.fasta.masked'
+PROT='/home/fromero3/braker3/Vertebrata.fa'
+ALNS='/home/fromero3/braker3/star_alns_March2024'
+
+#Delete Acoerulescens species run from previous runs, if needed
+rm -rf /home/fromero3/Augustus/config/species/Acoerulescens
+
+#Make a new working directory for this run
+cd /home/fromero3
+mkdir -p run_braker3_March2024
+wd=run_braker3_March2024
+
+#Execute braker3
+apptainer exec -B ${PWD}:${PWD} ${BRAKER_SIF} braker.pl \
+--AUGUSTUS_CONFIG_PATH=${AUGUSTUS_CONFIG_PATH} \
+--genome=${GENOME} \
+--prot_seq=${PROT} \
+--rnaseq_sets_ids=243_liver_ACTTGA_L003.sort,253_heart_GCCAAT_L003.sort,243_liver_ACTTGA_L005.sort,253_heart_GCCAAT_L005.sort,251_heart_GATCAG_L003.sort,253_kidney_ACAGTG_L003.sort,251_heart_GATCAG_L005.sort,253_kidney_ACAGTG_L005.sort,251_kidney_TTAGGC_L003.sort,253_ovary_CGATGT_L003.sort,251_kidney_TTAGGC_L005.sort,253_ovary_CGATGT_L005.sort \
+--rnaseq_sets_dir=${ALNS} \
+--softmasking \
+--workingdir=${wd} \
+--threads 16 \
+--species=Acoerulescens \
+--gff3
+
+# Run took ~60 hrs.
