@@ -6,9 +6,6 @@
 #SBATCH --mem=200G
 #SBATCH --time=30-00:00:00
 #SBATCH --output=post_curation_juicer.07202023.log
-#SBATCH --mail-type=begin
-#SBATCH --mail-type=end
-#SBATCH --mail-user=fromero3@ur.rochester.edu
 
 ## Juicer, Part 5: Generate a new genome from your Juicer manual curation ##
 ## Faye Romero. University of Rochester. 15 June 2023 ##
