@@ -1,0 +1,59 @@
+==================================================
+file name: FSJgenome_July2024_FINAL.fasta
+sequences:           659
+total length: 1330898477 bp  (1330850977 bp excl N/X-runs)
+GC level:         44.31 %
+bases masked:  355227117 bp ( 26.69 %)
+==================================================
+               number of      length   percentage
+               elements*    occupied  of sequence
+--------------------------------------------------
+Retroelements       358625    240518878 bp   18.07 %
+   SINEs:            11430      1433679 bp    0.11 %
+   Penelope           1926      9956984 bp    0.75 %
+   LINEs:           176557     72065787 bp    5.41 %
+    CRE/SLACS            0            0 bp    0.00 %
+     L2/CR1/Rex     171126     59770802 bp    4.49 %
+     R1/LOA/Jockey     261       704511 bp    0.05 %
+     R2/R4/NeSL       2729      1333922 bp    0.10 %
+     RTE/Bov-B          60        17996 bp    0.00 %
+     L1/CIN4           176       135418 bp    0.01 %
+   LTR elements:    170638    167019412 bp   12.55 %
+     BEL/Pao          1754      1382098 bp    0.10 %
+     Ty1/Copia          17        18069 bp    0.00 %
+     Gypsy/DIRS1       983       960411 bp    0.07 %
+       Retroviral   162343    158798302 bp   11.93 %
+
+DNA transposons      23742      4525919 bp    0.34 %
+   hobo-Activator     4320      1409621 bp    0.11 %
+   Tc1-IS630-Pogo      541        95240 bp    0.01 %
+   En-Spm                0            0 bp    0.00 %
+   MULE-MuDR            83         8080 bp    0.00 %
+   PiggyBac            260        37415 bp    0.00 %
+   Tourist/Harbinger  6476       608859 bp    0.05 %
+   Other (Mirage,        0            0 bp    0.00 %
+    P-element, Transib)
+
+Rolling-circles        661       194176 bp    0.01 %
+
+Unclassified:        58360     36169312 bp    2.72 %
+
+Total interspersed repeats:   281214109 bp   21.13 %
+
+
+Small RNA:            2960      2504135 bp    0.19 %
+
+Satellites:          43729     55930516 bp    4.20 %
+Simple repeats:     228656     12821938 bp    0.96 %
+Low complexity:      45361      2748032 bp    0.21 %
+==================================================
+
+* most repeats fragmented by insertions or deletions
+  have been counted as one element
+                                                      
+
+RepeatMasker version 4.1.4 , sensitive mode
+                                      
+run with rmblastn version 2.13.0+
+The query was compared to classified sequences in ".../FSJgenome_July2024_FINAL_master_repeats.lib"
+FamDB: 
