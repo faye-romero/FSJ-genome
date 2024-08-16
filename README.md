@@ -26,6 +26,7 @@ Other data in this repository include:
 * The master repeat library used for RepeatMasker annotation (`repeat-annotation/FSJgenome_July2024_FINAL_master_repeats.lib`)  
 * Sex-averaged (`figures/FigureS1/FileS1.tsv`) and sex-specific (`figures/Figure2_LinkageMap/LOD3LOD5_anon_map.csv`) linkage maps for the Florida Scrub-Jay  
 * Average coverage per scaffold for 50 Florida Scrub-Jays (`figures/Figure4_SexLinkedScaffs/Indiv_Cov_Per_Scaf.Rdata`)  
+* Average coverage in 1 kb windows across a chimeric contig (`chimera-discovery/AllSamples_AvgCov_Wunloc3_AllPos_1kbwin.Rdata`)  
 * RepeatMasker outputs for this genome assembly (`figures/Figure5_Repeats` and `figures/Supp_Figures/FigureS6`)  
   
 Please direct any questions about this project to Faye Romero (fromero3@ur.rochester.edu).
