@@ -1,9 +1,11 @@
 # Florida Scrub-Jay genome assembly and annotation
   
 Scripts for *de novo* genome assembly of the Florida Scrub-Jay (*Aphelocoma coerulescens*) genome.  
+  
 Find the genome assembly under NCBI accession GCA_041296385.1, BioProject PRJNA1076903.  
   
 If you use any data associated with this project, please cite:  
+  
 Faye G. Romero, Felix E.G. Beaudry, Eyvind Hovmand Warner, Tram N. Nguyen, John W. Fitzpatrick, Nancy Chen. **A new high-quality genome assembly and annotation for the threatened Florida Scrub-Jay** (*Aphelocoma coerulescens*). *bioRxiv* 2024.04.05.588142; doi: https(:)//doi(.)org/10.1101/2024.04.05.588142.  
   
 ---
