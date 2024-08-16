@@ -1,13 +1,18 @@
-## TE lengths
+## Are TE median lengths and TE counts different given the RepeatMasker outputs from different genome assemblies of the same species? ##
+## Faye Romero. University of Rochester ##
+## 30 July 2024. ##
 
+# Set wd, load packages
 setwd('/Users/Faye/Documents/FSJ_genome/Revisions_v3/')
 library(tidyverse)
 library(ggview)
 
-# Load TE data
+# Load TE data. See bottom of this script for how I made these Rdata objects
 load("TE_lengths_v123_July2024.Rdata")
 load("Plot_TE_lengths_v123_July2024.Rdata")
 load("TE_counts_v23_July2024.Rdata")
+
+# FSJ genome versions: V1 = Feng et al. 2020, V2 = Driscoll and Beaudry et al. 2024, V3 = this study
 
 #### TE median lengths ####
 
