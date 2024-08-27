@@ -2,7 +2,7 @@
   
 Scripts for *de novo* genome assembly of the Florida Scrub-Jay (*Aphelocoma coerulescens*) genome.  
   
-Find the genome assembly under NCBI accession GCA_041296385.1, BioProject PRJNA1076903.  
+Find the genome assembly under NCBI accession GCA_041296385.1 (UR_Acoe_1.0).  
   
 If you use any data associated with this project, please cite:  
   
