@@ -28,6 +28,7 @@ Data in this repository (found in `data/`) include:
 - `FSJgenome_July2024_FINAl_*.fasta.tbl`: RepeatMasker table summaries  
 - `AllSamples_AvgCov_Wunloc3_AllPos_1kbwin.Rdata`: average read depth for 50 jays, in 1 kb windows, across the chimeric ZW contig  
 - `Indiv_Cov_Per_Scaf.Rdata`: average read depth for 50 jays across all scaffolds in the genome  
+- `unmasked_seq_pos_FSJgenome_July2024_FINAL.bed`: positions of unmasked (lowercase) sequence in the genome (generated with the script `sex-linked-scaffold-id/extract_unmasked_seq_pos.py`)  
   
 ---
   
