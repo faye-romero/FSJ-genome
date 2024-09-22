@@ -23,12 +23,12 @@ Input data for sex-linked scaffold identification pipeline:
 ---
   
 Data in this repository (found in `data/`) include:  
-- `TE_lengths_v123_July2024.Rdata`: repeat element classifications and lengths for 3 versions of the Florida Scrub-Jay genome (v1 = Feng et al. 2020, Nature; v2 = Driscoll & Beaudry et al. 2024, Genetics; v3 = Romero et al. 2024, bioRxiv)  
-- `TE_counts_v23_July2024.Rdata`: repeat element classifications and counts for 2 versions of the Florida Scrub-Jay genome (v2 = Driscoll & Beaudry et al. 2024, Genetics; v3 = Romero et al. 2024, bioRxiv)  
+- `TE_lengths_v123_July2024.Rdata`: repeat element classifications and lengths for 3 versions of the Florida Scrub-Jay genome (v1 = Feng et al. 2020, *Nature*; v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *bioRxiv*)  
+- `TE_counts_v23_July2024.Rdata`: repeat element classifications and counts for 2 versions of the Florida Scrub-Jay genome (v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *bioRxiv*)  
 - `FSJgenome_July2024_FINAl_*.fasta.tbl`: RepeatMasker table summaries  
 - `AllSamples_AvgCov_Wunloc3_AllPos_1kbwin.Rdata`: average read depth for 50 jays, in 1 kb windows, across the chimeric ZW contig  
 - `Indiv_Cov_Per_Scaf.Rdata`: average read depth for 50 jays across all scaffolds in the genome  
-- `unmasked_seq_pos_FSJgenome_July2024_FINAL.bed`: positions of unmasked (lowercase) sequence in the genome (generated with the script `sex-linked-scaffold-id/extract_unmasked_seq_pos.py`)  
+- `unmasked_seq_pos_FSJgenome_July2024_FINAL.bed`: positions of unmasked (*i.e.*, uppercase) sequence in the genome (generated with the script `sex-linked-scaffold-id/extract_unmasked_seq_pos.py`)  
   
 ---
   
