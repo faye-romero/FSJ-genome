@@ -2,7 +2,7 @@
   
 Scripts for *de novo* genome assembly of the Florida Scrub-Jay (*Aphelocoma coerulescens*) genome.  
   
-Find the genome assembly under NCBI accession GCA_041296385.1 (UR_Acoe_1.0). Raw sequence reads are available on NCBI under BioProjects PRJNA1076903 and PRJNA1097984. The genome annotation, repeat library and repeat annotation, sex-specific linkage map, and per-chromosome read depth data (inputs for many of these scripts) are available on Figshare at figshare(.)com/projects/Florida_Scrub-Jay_genome_assembly/220939.  
+Find the genome assembly under NCBI accession **GCA_041296385.1** (UR_Acoe_1.0). Raw sequence reads are available on NCBI under BioProjects PRJNA1076903 and PRJNA1097984. The genome annotation, repeat library and repeat annotation, and sex-averaged and sex-specific linkage maps are available on Figshare at figshare(.)com/projects/Florida_Scrub-Jay_genome_assembly/220939.  
   
 If you use any data associated with this project, please cite:  
   
@@ -19,6 +19,15 @@ Input data for basic genome assembly and annotation:
   
 Input data for sex-linked scaffold identification pipeline:  
 * Paired-end whole-genome Illumina reads for at least 1 male and 1 female individual (here, I use 25 male and 25 female)  
+  
+---
+  
+Data in this repository (found in `data/`) include:  
+- `TE_lengths_v123_July2024.Rdata`: repeat element classifications and lengths for 3 versions of the Florida Scrub-Jay genome (v1 = Feng et al. 2020, Nature; v2 = Driscoll & Beaudry et al. 2024, Genetics; v3 = Romero et al. 2024, bioRxiv)  
+- `TE_counts_v23_July2024.Rdata`: repeat element classifications and counts for 2 versions of the Florida Scrub-Jay genome (v2 = Driscoll & Beaudry et al. 2024, Genetics; v3 = Romero et al. 2024, bioRxiv)  
+- `FSJgenome_July2024_FINAl_*.fasta.tbl`: RepeatMasker table summaries  
+- `AllSamples_AvgCov_Wunloc3_AllPos_1kbwin.Rdata`: average read depth for 50 jays, in 1 kb windows, across the chimeric ZW contig  
+- `Indiv_Cov_Per_Scaf.Rdata`: average read depth for 50 jays across all scaffolds in the genome  
   
 ---
   
