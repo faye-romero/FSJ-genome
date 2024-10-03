@@ -6,7 +6,7 @@ Find the genome assembly under NCBI accession **GCA_041296385.1** (UR_Acoe_1.0).
   
 If you use any data associated with this project, please cite:  
   
-Faye G. Romero, Felix E.G. Beaudry, Eyvind Hovmand Warner, Tram N. Nguyen, John W. Fitzpatrick, Nancy Chen. **A new high-quality genome assembly and annotation for the threatened Florida Scrub-Jay** (*Aphelocoma coerulescens*). *bioRxiv* 2024.04.05.588142. DOI: 10.1101/2024.04.05.588142.  
+Faye G. Romero, Felix E.G. Beaudry, Eyvind Hovmand Warner, Tram N. Nguyen, John W. Fitzpatrick, Nancy Chen. **A new high-quality genome assembly and annotation for the threatened Florida Scrub-Jay (*Aphelocoma coerulescens*)**. *G3:Genes|Genomes|Genetics*, jkae232. DOI: 10.1093/g3journal/jkae232.  
   
 ---
   
@@ -23,8 +23,8 @@ Input data for sex-linked scaffold identification pipeline:
 ---
   
 Data in this repository (found in `data/`) include:  
-- `TE_lengths_v123_July2024.Rdata`: repeat element classifications and lengths for 3 versions of the Florida Scrub-Jay genome (v1 = Feng et al. 2020, *Nature*; v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *bioRxiv*)  
-- `TE_counts_v23_July2024.Rdata`: repeat element classifications and counts for 2 versions of the Florida Scrub-Jay genome (v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *bioRxiv*)  
+- `TE_lengths_v123_July2024.Rdata`: repeat element classifications and lengths for 3 versions of the Florida Scrub-Jay genome (v1 = Feng et al. 2020, *Nature*; v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *G3*)  
+- `TE_counts_v23_July2024.Rdata`: repeat element classifications and counts for 2 versions of the Florida Scrub-Jay genome (v2 = Driscoll & Beaudry et al. 2024, *Genetics*; v3 = Romero et al. 2024, *G3*)  
 - `FSJgenome_July2024_FINAl_*.fasta.tbl`: RepeatMasker table summaries  
 - `AllSamples_AvgCov_Wunloc3_AllPos_1kbwin.Rdata`: average read depth for 50 jays, in 1 kb windows, across the chimeric ZW contig  
 - `Indiv_Cov_Per_Scaf.Rdata`: average read depth for 50 jays across all scaffolds in the genome  
